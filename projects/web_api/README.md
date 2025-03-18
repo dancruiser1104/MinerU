@@ -58,3 +58,11 @@ http://127.0.0.1:8000/docs
 ### 解析效果
 
 ![](https://i-blog.csdnimg.cn/direct/a54dcae834ae48d498fb595aca4212c3.png)
+
+### 国内用户构建docker images时，需要
+  1. Dockerfile 里要配置一下清华的源 PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+  2. requement.txt 里要增加 modelscope 库
+  3. download_model.py 里：
+       a. 将 huggingface 库换成 modelscope
+       b. 将layoutreader 模型从原来的 hantian/layoutreader 改为 ppaanngggg/layoutreader
+  
